@@ -15,11 +15,11 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "rust-src-esp";
-  version = "1.90.0.0";
+  version = "1.88.0.0";
 
   src = fetchurl {
     url = "https://github.com/esp-rs/rust-build/releases/download/v${version}/rust-src-${version}.tar.xz";
-    hash = "sha256-BqSkAyX0ftKGBXIzYV3WtT5zjF59QE2T1DZO2fZNpZk=";
+    hash = "sha256-m35u//UHO7uFtQ5mn/mVhNuJ1PCsuljgkD3Rmv3uuaE=";
   };
 
   installPhase = ''
