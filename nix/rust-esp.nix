@@ -24,14 +24,14 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "rust-esp";
-  version = "1.88.0.0";
+  version = "1.90.0.0";
 
   src = fetchurl {
     url = "https://github.com/esp-rs/rust-build/releases/download/v${version}/rust-${version}-${platform}.tar.xz";
     sha256 =
       {
         aarch64-linux = lib.fakeSha256;
-        x86_64-linux = "sha256-dFNJFHSl9yiyRIFlHUPLzq+S9438q+fLiCxr8h/uBQU=";
+        x86_64-linux = "sha256-GmHoiEIVdOQbg72rNtSpg1GqYvV1tVXBtJczZprFacc=";
         x86_64-darwin = lib.fakeSha256;
         aarch64-darwin = lib.fakeSha256;
       }
