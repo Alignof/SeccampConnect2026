@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "XIAO-ESP32S3-DIP")(type "KiCad")(uri "/home/takana/Kicad/XIAO-ESP32S3-DIP.pretty")(options "")(descr ""))
+  (lib (name "keyswitches")(type "KiCad")(uri "/home/takana/Kicad/keyswitches.pretty")(options "")(descr ""))
+  (lib (name "ky-023")(type "KiCad")(uri "/home/takana/Kicad/ky-023.pretty")(options "")(descr ""))
+)
