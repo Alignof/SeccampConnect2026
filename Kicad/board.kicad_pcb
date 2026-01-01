@@ -1295,7 +1295,7 @@
 	(footprint "keyswitches:Kailh_socket_PG1350_optional_reversible"
 		(layer "F.Cu")
 		(uuid "02788319-0594-4fff-883a-cd68637ebed7")
-		(at 72.0975 67.935)
+		(at 72.0975 70.935)
 		(descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount, reversible")
 		(tags "kailh,choc")
 		(property "Reference" "SW5"
@@ -4422,13 +4422,13 @@
 	(footprint "mylib:1n4148ws_reversible"
 		(layer "F.Cu")
 		(uuid "23289fb9-c8bf-431f-9da3-7e67ca58fc53")
-		(at 100.8875 57.325 180)
+		(at 100.8875 54.325 180)
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D7"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
-			(uuid "a6ea0355-f067-428d-bff9-bf9d22321d5d")
+			(uuid "24ce6b6f-ae9e-421d-baf3-fd671a9a4677")
 			(effects
 				(font
 					(size 1 1)
@@ -4439,7 +4439,7 @@
 		(property "Value" "1N4148WS"
 			(at 0.1 1.9 0)
 			(layer "F.Fab")
-			(uuid "41d9cbbe-070b-4ec9-9e63-87c71c7c61be")
+			(uuid "7252b40d-fa21-4ff5-ad2d-361988efd4b9")
 			(effects
 				(font
 					(size 1 1)
@@ -4452,7 +4452,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "89c52da4-50b4-4e4a-8c46-1b33bfc43144")
+			(uuid "c3c1aa31-6090-41fa-a573-c087bee73112")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4465,7 +4465,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e869accd-3ade-4ef0-bf35-8405337c55e5")
+			(uuid "78da38ad-7250-4fd9-bfa0-599bf47a5edb")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6267,13 +6267,13 @@
 	(footprint "keyswitches:Kailh_socket_PG1350_optional_reversible"
 		(layer "F.Cu")
 		(uuid "3eeade57-c853-4522-952f-718ff5cb1e5d")
-		(at 108.5285 48.125)
+		(at 108.5285 45.125)
 		(descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount, reversible")
 		(tags "kailh,choc")
 		(property "Reference" "SW3"
 			(at 0 -8.89 0)
 			(layer "F.SilkS")
-			(uuid "15df32bc-c3d2-47be-a232-a8914fb58233")
+			(uuid "065a82ed-1284-4e0d-a16f-194a1ee46fa3")
 			(effects
 				(font
 					(size 1 1)
@@ -6284,7 +6284,7 @@
 		(property "Value" "SW_Push"
 			(at 0 8.255 0)
 			(layer "F.Fab")
-			(uuid "90f96068-c2a8-4245-bc11-4fb4be1bd287")
+			(uuid "695c89ef-c838-4542-8a66-dd9ac68fd0de")
 			(effects
 				(font
 					(size 1 1)
@@ -6296,7 +6296,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "67796e42-ab49-436a-8cd0-e312e15be8a6")
+			(uuid "90abdbad-85e9-4935-8780-8ce7faa73ec9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6308,7 +6308,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "27f2c515-d89e-4df5-803b-80f1d2f9f45f")
+			(uuid "376c47de-f5e4-412f-b362-d57b34f18388")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7451,13 +7451,13 @@
 	(footprint "mylib:1n4148ws_reversible"
 		(layer "F.Cu")
 		(uuid "486eadaa-d726-49c9-886f-9a9732f3529d")
-		(at 100.7475 77.715 180)
+		(at 100.7475 74.715 180)
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D11"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
-			(uuid "8835ccb7-a860-4659-b34b-671d34bc9c14")
+			(uuid "6bd20092-62bf-41b3-ba8d-92e85642d4cb")
 			(effects
 				(font
 					(size 1 1)
@@ -7468,7 +7468,7 @@
 		(property "Value" "1N4148WS"
 			(at 0.1 1.9 0)
 			(layer "F.Fab")
-			(uuid "f2bb97df-ee04-408d-b2c3-bede85b100e0")
+			(uuid "4f93856a-ad91-48ef-a0ed-7e52e81239e3")
 			(effects
 				(font
 					(size 1 1)
@@ -7481,7 +7481,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ed7f135b-4eec-49ca-866c-97bdef22bf8f")
+			(uuid "5c895633-ccb5-43b4-8800-903599848431")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7494,7 +7494,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e5060387-7cc2-43c2-a1e4-39704e4ef1e2")
+			(uuid "748a07b3-30ac-4b53-a1fa-2fe161d153e1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9296,13 +9296,13 @@
 	(footprint "mylib:1n4148ws_reversible"
 		(layer "F.Cu")
 		(uuid "5e8a4c48-1a8a-4a63-a438-439e0b28dd15")
-		(at 101.2375 37.625 180)
+		(at 101.2375 34.625 180)
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D3"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
-			(uuid "7b9f66cc-c8d5-4c57-aa45-08f962cf5e34")
+			(uuid "ae3cff3f-927e-4343-908a-dd352b06a73f")
 			(effects
 				(font
 					(size 1 1)
@@ -9313,7 +9313,7 @@
 		(property "Value" "1N4148WS"
 			(at 0.1 1.9 0)
 			(layer "F.Fab")
-			(uuid "1a274d81-fdbe-49f0-b1fc-7e15e5dd1a37")
+			(uuid "1e166f7f-0b49-4c45-a87b-7cbcbc391b57")
 			(effects
 				(font
 					(size 1 1)
@@ -9326,7 +9326,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "05577776-13f9-4c0e-aadd-b3010dcc911d")
+			(uuid "e04889fa-70f6-4fcf-9dae-491e32cc3b03")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9339,7 +9339,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4df8ca16-9300-4c27-984a-43eb8ace0ef4")
+			(uuid "80a7dac1-5c19-4525-aad5-8f1c139a53c4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10816,7 +10816,7 @@
 	(footprint "mylib:1n4148ws_reversible"
 		(layer "F.Cu")
 		(uuid "7b3c15db-4a0e-4f56-b0ed-6ec07c597baa")
-		(at 66.6975 77.715 180)
+		(at 66.6975 80.715 180)
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D9"
@@ -12661,7 +12661,7 @@
 	(footprint "mylib:1n4148ws_reversible"
 		(layer "F.Cu")
 		(uuid "83248d61-07c2-4926-ab4f-494701990c05")
-		(at 64.8875 57.325 180)
+		(at 64.8875 60.325 180)
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D5"
@@ -15167,7 +15167,7 @@
 	(footprint "keyswitches:Kailh_socket_PG1350_optional_reversible"
 		(layer "F.Cu")
 		(uuid "a1960b3a-b0f5-4e15-94f0-7f2ba180207b")
-		(at 73.7875 88.03)
+		(at 73.7875 91.03)
 		(descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount, reversible")
 		(tags "kailh,choc")
 		(property "Reference" "SW9"
@@ -17111,7 +17111,7 @@
 	(footprint "keyswitches:Kailh_socket_PG1350_optional_reversible"
 		(layer "F.Cu")
 		(uuid "ae1cde91-871d-4fe0-9400-722cc89c8f01")
-		(at 70.4375 48.125)
+		(at 70.4375 51.125)
 		(descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount, reversible")
 		(tags "kailh,choc")
 		(property "Reference" "SW1"
@@ -18295,7 +18295,7 @@
 	(footprint "mylib:1n4148ws_reversible"
 		(layer "F.Cu")
 		(uuid "b8c0079e-76a0-4f70-ad1f-2168fa8c9b20")
-		(at 75.3375 37.625 180)
+		(at 63.1875 41.325 180)
 		(descr "SOD-323")
 		(tags "SOD-323")
 		(property "Reference" "D1"
@@ -20278,7 +20278,7 @@
 	(footprint "ky-023:KY-023"
 		(layer "F.Cu")
 		(uuid "dd367e4b-461b-4ffe-aed3-864b7a104e0a")
-		(at 98.0375 107.745)
+		(at 98.0375 105.745)
 		(property "Reference" "U2"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -20566,13 +20566,13 @@
 	(footprint "keyswitches:Kailh_socket_PG1350_optional_reversible"
 		(layer "F.Cu")
 		(uuid "e19ddf81-509b-4295-a035-cbbd4bfcf01a")
-		(at 107.6925 88.03)
+		(at 107.6925 85.03)
 		(descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount, reversible")
 		(tags "kailh,choc")
 		(property "Reference" "SW11"
 			(at 0 -8.89 0)
 			(layer "F.SilkS")
-			(uuid "24633190-9fef-4e82-900f-55caf3d62e88")
+			(uuid "9c6c9156-76a7-4929-90ba-0fd9ce32a099")
 			(effects
 				(font
 					(size 1 1)
@@ -20583,7 +20583,7 @@
 		(property "Value" "SW_Push"
 			(at 0 8.255 0)
 			(layer "F.Fab")
-			(uuid "fc7dda65-4730-4190-b47f-2c6e0bf57c9f")
+			(uuid "86c35ff8-36a8-49a9-ad52-4f01ef2ec9d3")
 			(effects
 				(font
 					(size 1 1)
@@ -20595,7 +20595,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "883635d1-49eb-48a5-8cb6-616829b7ffb1")
+			(uuid "489592af-d780-4817-962c-942349de7d04")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20607,7 +20607,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "26a2feed-60e3-4739-af2d-3f4630f51fb4")
+			(uuid "4d5da30f-e333-498d-9aff-e14ce68dc006")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21750,13 +21750,13 @@
 	(footprint "keyswitches:Kailh_socket_PG1350_optional_reversible"
 		(layer "F.Cu")
 		(uuid "f30b1b03-48a7-4ee5-8f7e-ce22905e725c")
-		(at 108.1925 67.935)
+		(at 108.1925 64.935)
 		(descr "Kailh \"Choc\" PG1350 keyswitch with optional socket mount, reversible")
 		(tags "kailh,choc")
 		(property "Reference" "SW7"
 			(at 0 -8.89 0)
 			(layer "F.SilkS")
-			(uuid "f9ff8605-f8d7-423e-9162-32e5b8a98b53")
+			(uuid "4bd24b7d-24b5-475a-89de-97c4a38d2089")
 			(effects
 				(font
 					(size 1 1)
@@ -21767,7 +21767,7 @@
 		(property "Value" "SW_Push"
 			(at 0 8.255 0)
 			(layer "F.Fab")
-			(uuid "ac5bbbd5-a62c-459f-a329-dc43318a525d")
+			(uuid "e455804b-79f5-4b34-9458-9985b4fee0e4")
 			(effects
 				(font
 					(size 1 1)
@@ -21779,7 +21779,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "fbbc5876-d58e-4c56-8a58-b259bad0449e")
+			(uuid "f44b5089-75d1-402c-b8ea-750d2b59e4a8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21791,7 +21791,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "e13e252f-b696-4426-bcd6-fbd10bc488c7")
+			(uuid "1cf8c8ad-77b3-4d68-8a2d-6baa18e65817")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23861,7 +23861,7 @@
 	(footprint "ky-023:KY-023"
 		(layer "B.Cu")
 		(uuid "06194e4c-b3be-436a-b387-ea30e14a38ef")
-		(at 101.2875 122.005)
+		(at 101.2875 120.005)
 		(property "Reference" "U3"
 			(at 0 0.5 180)
 			(unlocked yes)
