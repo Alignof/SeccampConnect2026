@@ -25,6 +25,7 @@ use rmk::config::{BehaviorConfig, PositionalConfig, RmkConfig, StorageConfig, Vi
 use rmk::debounce::default_debouncer::DefaultDebouncer;
 use rmk::futures::future::join3;
 use rmk::input_device::Runnable;
+use rmk::input_device::joystick::JoystickProcessor;
 use rmk::input_device::rotary_encoder::DefaultPhase;
 use rmk::input_device::rotary_encoder::RotaryEncoder;
 use rmk::keyboard::Keyboard;
@@ -76,7 +77,7 @@ async fn main(_s: Spawner) {
     let flash = async_flash_wrapper(flash);
 
     // Initialize the IO pins
-    let (row_pins, col_pins) = config_matrix_pins_esp!(peripherals: peripherals, input: [GPIO8, GPIO4], output: [GPIO3, GPIO5, GPIO6]);
+    let (row_pins, col_pins) = config_matrix_pins_esp!(peripherals: peripherals, input: [GPIO4, GPIO7], output: [GPIO3, GPIO5, GPIO6]);
 
     // RMK config
     let vial_config = VialConfig::new(VIAL_KEYBOARD_ID, VIAL_KEYBOARD_DEF, &[(0, 0), (1, 1)]);
@@ -117,6 +118,28 @@ async fn main(_s: Spawner) {
     let pin_a = Input::new(peripherals.GPIO43, InputConfig::default());
     let pin_b = Input::new(peripherals.GPIO44, InputConfig::default());
     let mut encoder = RotaryEncoder::with_phase(pin_a, pin_b, DefaultPhase, 0);
+
+    // Initialize Joystick
+    let saadc_config = saadc::Config::default();
+    let adc = saadc::SAADC::new(
+        p.SAADC,
+        Irqs,
+        saadc_config,
+        [
+            saadc::ChannelConfig::SingleEnded(saadc::VddhDiv5Input.degrade_saadc()),
+            saadc::ChannelConfig::SingleEnded(p.P0_31.degrade_saadc()),
+            saadc::ChannelConfig::SingleEnded(p.P0_29.degrade_saadc()),
+        ],
+    );
+    saadc.calibrate().await;
+    let mut adc_dev = NrfAdc::new(
+        adc,
+        [AnalogEventType::Joystick(1)],
+        20,        /* polling interval */
+        Some(350), /* light sleep interval */
+    );
+    let mut joy_proc =
+        JoystickProcessor::new([[80, 0], [0, 80]], [29130, 29365], 6, &default_keymap);
 
     join3(
         run_devices! (
