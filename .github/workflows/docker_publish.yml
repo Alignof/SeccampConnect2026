@@ -1,0 +1,52 @@
+name: Docker Publish
+
+on:
+  push:
+    branches: ["master", "fix/container_image"]
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+
+      - name: Magic Nix Cache
+        uses: DeterminateSystems/magic-nix-cache-action@v2
+
+      - name: Set lowercase image name
+        run: |
+          echo "IMAGE_NAME_LC=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
+
+      - name: Build Docker image with Nix
+        run: |
+          nix build .#dockerImage
+          docker load < result
+
+      - name: Log into registry ${{ env.REGISTRY }}
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push image
+        run: |
+          # Re-tag the image built by Nix to match the lowercase repository name
+          # The name 'ghcr.io/alignof/esp32s3_led_blink' must match what is in flake.nix
+          docker tag ghcr.io/alignof/SeccampConnect2026:latest ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:latest
+
+          # Push using the lowercase environment variable
+          docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:latest
