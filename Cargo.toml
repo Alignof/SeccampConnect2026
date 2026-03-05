@@ -5,6 +5,16 @@ description = "Keyboard firmware written in Rust"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 
+[lints.clippy]
+pedantic = "warn"
+missing_docs_in_private_items = "warn"
+
+[lints.rust]
+missing_docs = "warn"
+
+[lints.rustdoc]
+missing_crate_level_docs = "warn"
+
 [dependencies]
 rmk = { version = "0.8.2", default-features = false, features = [
   "esp32s3_ble",
