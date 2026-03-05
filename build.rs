@@ -3,7 +3,7 @@ use std::io::Read;
 use std::path::Path;
 use std::{env, fs};
 
-use const_gen::*;
+use const_gen::{const_declaration, CompileConst};
 use xz2::read::XzEncoder;
 
 fn main() {
@@ -27,8 +27,8 @@ fn generate_vial_config() {
         Ok(mut file) => {
             file.read_to_string(&mut content).expect("Cannot read vial.json");
         }
-        Err(e) => println!("Cannot find vial.json {:?}: {}", p, e),
-    };
+        Err(e) => println!("Cannot find vial.json {p:?}: {e}"),
+    }
 
     let vial_cfg = json::stringify(json::parse(&content).unwrap());
     let mut keyboard_def_compressed: Vec<u8> = Vec::new();
