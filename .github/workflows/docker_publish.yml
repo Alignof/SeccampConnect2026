@@ -44,9 +44,7 @@ jobs:
 
       - name: Push image
         run: |
-          # Re-tag the image built by Nix to match the lowercase repository name
-          # The name 'ghcr.io/alignof/esp32s3_led_blink' must match what is in flake.nix
-          docker tag ghcr.io/alignof/SeccampConnect2026:latest ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:latest
+          docker tag ghcr.io/alignof/seccampconnect2026:latest ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:latest
 
           # Push using the lowercase environment variable
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC }}:latest
