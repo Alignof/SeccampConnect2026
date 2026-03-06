@@ -51,6 +51,8 @@
           esp-idf-s3-minimal.tools.xtensa-esp-elf-gdb
           espflash
           gitMinimal
+
+          vial
         ];
       in
       {
