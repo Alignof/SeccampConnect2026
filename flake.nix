@@ -51,6 +51,8 @@
           esp-idf-s3-minimal.tools.xtensa-esp-elf-gdb
           espflash
           gitMinimal
+
+          vial
         ];
       in
       {
@@ -58,7 +60,7 @@
 
         # Development shell for local use
         devShells.default = pkgs.mkShell {
-          name = "Development environment for ESP32S3";
+          name = "ESP32S3";
           nativeBuildInputs = devDeps;
         };
 

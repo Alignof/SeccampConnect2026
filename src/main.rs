@@ -34,7 +34,7 @@ use rmk::{HostResources, initialize_encoder_keymap_and_storage, run_devices, run
 use static_cell::StaticCell;
 use {esp_alloc as _, esp_backtrace as _};
 
-use crate::keymap::*;
+use crate::keymap::{ROW, COL};
 use crate::vial::{VIAL_KEYBOARD_DEF, VIAL_KEYBOARD_ID};
 
 ::esp_bootloader_esp_idf::esp_app_desc!();
@@ -76,7 +76,7 @@ async fn main(_s: Spawner) {
     let flash = async_flash_wrapper(flash);
 
     // Initialize the IO pins
-    let (row_pins, col_pins) = config_matrix_pins_esp!(peripherals: peripherals, input: [GPIO8, GPIO4], output: [GPIO3, GPIO5, GPIO6]);
+    let (row_pins, col_pins) = config_matrix_pins_esp!(peripherals: peripherals, input: [GPIO4, GPIO7], output: [GPIO6, GPIO5, GPIO3]);
 
     // RMK config
     let vial_config = VialConfig::new(VIAL_KEYBOARD_ID, VIAL_KEYBOARD_DEF, &[(0, 0), (1, 1)]);
@@ -110,7 +110,6 @@ async fn main(_s: Spawner) {
     // Initialize the matrix and keyboard
     let debouncer = DefaultDebouncer::new();
     let mut matrix = Matrix::<_, _, _, ROW, COL, true>::new(row_pins, col_pins, debouncer);
-    // let mut matrix = rmk::matrix::TestMatrix::<ROW, COL>::new();
     let mut keyboard = Keyboard::new(&keymap); // Initialize the light controller
 
     // Initialize rotary encoder
