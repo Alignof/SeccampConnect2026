@@ -4452,7 +4452,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 110.49 55.8799 90)
 			(effects
 				(font
@@ -4461,7 +4461,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 112.395 54.61 0)
 			(effects
 				(font
@@ -4546,7 +4546,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 102.87 71.12 0)
 			(effects
 				(font
@@ -4613,7 +4613,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 77.47 71.12 0)
 			(effects
 				(font
@@ -4673,7 +4673,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 135.89 55.8799 90)
 			(effects
 				(font
@@ -4682,7 +4682,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 137.795 54.61 0)
 			(effects
 				(font
@@ -4768,7 +4768,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical"
 			(at 123.19 123.19 0)
 			(effects
 				(font
@@ -5163,7 +5163,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 135.89 81.2799 90)
 			(effects
 				(font
@@ -5172,7 +5172,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 137.795 80.01 0)
 			(effects
 				(font
@@ -5257,7 +5257,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 102.87 58.42 0)
 			(effects
 				(font
@@ -5460,7 +5460,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 128.27 58.42 0)
 			(effects
 				(font
@@ -5520,7 +5520,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 85.09 68.5799 90)
 			(effects
 				(font
@@ -5529,7 +5529,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 86.995 67.31 0)
 			(effects
 				(font
@@ -5607,7 +5607,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 59.69 81.2799 90)
 			(effects
 				(font
@@ -5616,7 +5616,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 61.595 80.01 0)
 			(effects
 				(font
@@ -5838,7 +5838,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 85.09 81.2799 90)
 			(effects
 				(font
@@ -5847,7 +5847,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 86.995 80.01 0)
 			(effects
 				(font
@@ -6064,7 +6064,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 128.27 71.12 0)
 			(effects
 				(font
@@ -6191,7 +6191,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 135.89 68.5799 90)
 			(effects
 				(font
@@ -6200,7 +6200,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 137.795 67.31 0)
 			(effects
 				(font
@@ -6285,7 +6285,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 128.27 45.72 0)
 			(effects
 				(font
@@ -6418,7 +6418,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 52.07 58.42 0)
 			(effects
 				(font
@@ -6478,7 +6478,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 110.49 81.2799 90)
 			(effects
 				(font
@@ -6487,7 +6487,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 112.395 80.01 0)
 			(effects
 				(font
@@ -6706,7 +6706,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 52.07 45.72 0)
 			(effects
 				(font
@@ -7115,7 +7115,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 102.87 45.72 0)
 			(effects
 				(font
@@ -7309,7 +7309,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 59.69 68.5799 90)
 			(effects
 				(font
@@ -7318,7 +7318,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 61.595 67.31 0)
 			(effects
 				(font
@@ -7661,7 +7661,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 85.09 55.8799 90)
 			(effects
 				(font
@@ -7670,7 +7670,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 86.995 54.61 0)
 			(effects
 				(font
@@ -7952,7 +7952,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 110.49 68.5799 90)
 			(effects
 				(font
@@ -7961,7 +7961,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 112.395 67.31 0)
 			(effects
 				(font
@@ -8046,7 +8046,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 52.07 71.12 0)
 			(effects
 				(font
@@ -8106,7 +8106,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1N4148W"
+		(property "Value" "1N4148"
 			(at 59.69 55.8799 90)
 			(effects
 				(font
@@ -8115,7 +8115,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+		(property "Footprint" "mylib:Diode_THT_reversible"
 			(at 61.595 54.61 0)
 			(effects
 				(font
@@ -8266,7 +8266,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 77.47 45.72 0)
 			(effects
 				(font
@@ -8333,7 +8333,7 @@
 				)
 			)
 		)
-		(property "Footprint" "keyswitches:Kailh_socket_PG1350_optional_reversible"
+		(property "Footprint" "mylib:Kailh_socket_PG1350_optional_reversible"
 			(at 77.47 58.42 0)
 			(effects
 				(font
