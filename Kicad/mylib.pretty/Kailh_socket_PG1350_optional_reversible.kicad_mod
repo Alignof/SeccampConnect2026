@@ -1158,4 +1158,15 @@
 		(uuid "862c24e3-94da-42bf-89fe-50e74677661c")
 	)
 	(embedded_fonts no)
+	(model "/home/takana/Kicad/keyswitch_model/choc/v2/KiCad/brown.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
