@@ -9,20 +9,20 @@ on:
 jobs:
   rust:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/alignof/seccampconnect2026:latest
+
     steps:
       - uses: actions/checkout@v4
 
-      - name: install clippy
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          components: clippy
-
-      - uses: sksat/action-clippy@v1.0.0
+      - name: Run clippy (push)
+        uses: sksat/action-clippy@v1.1.1
         if: github.event_name == 'push'
         with:
           reporter: github-check
 
-      - uses: sksat/action-clippy@v1.0.0
+      - name: Run clippy (pull_request)
+        uses: sksat/action-clippy@v1.1.1
         if: github.event_name == 'pull_request'
         with:
           reporter: github-pr-review

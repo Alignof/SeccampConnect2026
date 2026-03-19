@@ -71,6 +71,7 @@
           maxLayers = 100; # Merge small layers to improve performance
 
           contents = devDeps ++ [
+            pkgs.bashInteractive
             pkgs.coreutils
             pkgs.stdenv.cc
 
