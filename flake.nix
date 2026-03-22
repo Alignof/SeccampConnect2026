@@ -72,6 +72,8 @@
 
           contents = devDeps ++ [
             pkgs.bashInteractive
+            pkgs.curl
+            pkgs.reviewdog
             pkgs.coreutils
             pkgs.stdenv.cc
 
@@ -120,6 +122,12 @@
 
             mkdir -p ./sbin
             ln -sf /bin/ldconfig ./sbin/ldconfig
+
+            # Create standard paths for scripts
+            mkdir -p ./bin ./usr/bin
+            ln -sf ${pkgs.bashInteractive}/bin/bash ./bin/bash
+            ln -sf ${pkgs.bashInteractive}/bin/bash ./usr/bin/bash
+            ln -sf ${pkgs.coreutils}/bin/env ./usr/bin/env
           '';
 
           config = {
