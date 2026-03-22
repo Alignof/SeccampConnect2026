@@ -37,6 +37,18 @@
         ];
         pkgs = import nixpkgs { inherit system overlays; };
 
+        clippy-reviewdog-filter = pkgs.rustPlatform.buildRustPackage rec {
+          pname = "clippy-reviewdog-filter";
+          version = "0.1.6";
+          src = pkgs.fetchFromGitHub {
+            owner = "qnighy";
+            repo = "clippy-reviewdog-filter";
+            rev = "v${version}";
+            hash = "sha256-W4rKeaXKxn9MBCDv57OPkuK/fGb6M7SzfYsgj0IYd14=";
+          };
+          cargoHash = "sha256-PTGbaCbeCM/mBHYo6lmOyt/89yU01IsRkIlzTn7Lji8=";
+        };
+
         # Combine Rust ESP toolchain and source
         rust_toolchain_esp = fenix.packages.${system}.combine [
           pkgs.rust-esp
@@ -74,6 +86,7 @@
             pkgs.bashInteractive
             pkgs.curl
             pkgs.reviewdog
+            clippy-reviewdog-filter
             pkgs.coreutils
             pkgs.stdenv.cc
 
