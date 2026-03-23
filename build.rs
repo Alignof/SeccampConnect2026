@@ -32,7 +32,7 @@ fn generate_vial_config() {
             file.read_to_string(&mut content)
                 .expect("Cannot read vial.json");
         }
-        Err(e) => println!("Cannot find vial.json {p:?}: {e}"),
+        Err(e) => println!("Cannot find vial.json {:?}: {e}", p.display()),
     }
 
     let vial_cfg = json::stringify(json::parse(&content).unwrap());
