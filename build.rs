@@ -1,3 +1,5 @@
+//! build.rs - Generates vial config.
+
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
@@ -6,6 +8,7 @@ use std::{env, fs};
 use const_gen::{CompileConst, const_declaration};
 use xz2::read::XzEncoder;
 
+/// Watches `vial.json` and generate vial configuration.
 fn main() {
     // Generate vial config at the root of project
     println!("cargo:rerun-if-changed=vial.json");
@@ -17,6 +20,7 @@ fn main() {
     // println!("cargo:rustc-link-arg=-Tdefmt.x");
 }
 
+/// Generates Vial configuration from `vial.json`.
 fn generate_vial_config() {
     // Generated vial config file
     let out_file = Path::new(&env::var_os("OUT_DIR").unwrap()).join("config_generated.rs");

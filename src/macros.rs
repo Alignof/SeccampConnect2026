@@ -1,3 +1,6 @@
+//! Macro utilities for pin configuration
+
+/// initializies pin config according to each pin settings.
 macro_rules! config_matrix_pins_esp {
     (peripherals: $p:ident, input: [$($in_pin:ident), *], output: [$($out_pin:ident), +]) => {
         {

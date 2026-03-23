@@ -1,3 +1,15 @@
+//! Security Camp Connect 2026
+//!
+//! [https://www.ipa.go.jp/jinzai/security-camp/2025/connect/device.html](https://www.ipa.go.jp/jinzai/security-camp/2025/connect/device.html)
+//!
+//! 3x4 prototyping keyboards designed for hands-on practice.
+//!
+//! # Feature
+//! - ESP32S3
+//! - Vial support
+//! - Low profile with 17 mm pitch
+//! - Integrated rotary encoder and 0.91-inch OLED
+
 #![no_std]
 #![no_main]
 
@@ -39,6 +51,10 @@ use crate::vial::{VIAL_KEYBOARD_DEF, VIAL_KEYBOARD_ID};
 
 ::esp_bootloader_esp_idf::esp_app_desc!();
 
+/// Main function.
+///
+/// Initialize devices and spawn rmk tasks.
+#[allow(clippy::used_underscore_binding)]
 #[esp_rtos::main]
 async fn main(_s: Spawner) {
     // Initialize the peripherals and bluetooth controller
