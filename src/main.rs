@@ -1,3 +1,15 @@
+//! Security Camp Connect 2026
+//!
+//! [https://www.ipa.go.jp/jinzai/security-camp/2025/connect/device.html](https://www.ipa.go.jp/jinzai/security-camp/2025/connect/device.html)
+//!
+//! 3x4 prototyping keyboards designed for hands-on practice.
+//!
+//! # Feature
+//! - ESP32S3
+//! - Vial support
+//! - Low profile with 17 mm pitch
+//! - Integrated rotary encoder and 0.91-inch OLED
+
 #![no_std]
 #![no_main]
 
@@ -39,8 +51,17 @@ use crate::vial::{VIAL_KEYBOARD_DEF, VIAL_KEYBOARD_ID};
 
 ::esp_bootloader_esp_idf::esp_app_desc!();
 
+/// Main function.
+///
+/// Initialize devices and spawn rmk tasks.
+#[allow(clippy::used_underscore_binding)]
 #[esp_rtos::main]
 async fn main(_s: Spawner) {
+    // Singleton for ble controller.
+    static RADIO: StaticCell<Controller<'static>> = StaticCell::new();
+    // Endpoint buffer for USB transfer.
+    static mut EP_MEMORY: [u8; 1024] = [0; 1024];
+
     // Initialize the peripherals and bluetooth controller
     esp_println::logger::init_logger_from_env();
     let peripherals = esp_hal::init(esp_hal::Config::default().with_cpu_clock(CpuClock::max()));
@@ -55,17 +76,15 @@ async fn main(_s: Spawner) {
     );
     let _trng_source = TrngSource::new(peripherals.RNG, peripherals.ADC1);
     let mut rng = esp_hal::rng::Trng::try_new().unwrap();
-    static RADIO: StaticCell<Controller<'static>> = StaticCell::new();
     let radio = RADIO.init(esp_radio::init().unwrap());
     let bluetooth = peripherals.BT;
-    let connector = BleConnector::new(radio, bluetooth, Default::default()).unwrap();
+    let connector = BleConnector::new(radio, bluetooth, esp_radio::ble::Config::default()).unwrap();
     let controller: ExternalController<_, 20> = ExternalController::new(connector);
     let central_addr = [0x18, 0xe2, 0x21, 0x80, 0xc0, 0xc7];
     let mut host_resources = HostResources::new();
     let stack = build_ble_stack(controller, central_addr, &mut rng, &mut host_resources).await;
 
     // Initialize USB
-    static mut EP_MEMORY: [u8; 1024] = [0; 1024];
     let usb = Usb::new(peripherals.USB0, peripherals.GPIO20, peripherals.GPIO19);
     // Create the driver, from the HAL.
     let config = Config::default();
@@ -81,7 +100,7 @@ async fn main(_s: Spawner) {
     // RMK config
     let vial_config = VialConfig::new(VIAL_KEYBOARD_ID, VIAL_KEYBOARD_DEF, &[(0, 0), (1, 1)]);
     let storage_config = StorageConfig {
-        start_addr: 0x3f0000,
+        start_addr: 0x3f_0000,
         num_sectors: 16,
         ..Default::default()
     };
