@@ -1,2 +1,4 @@
 build/
 sdkconfig.old
+firmware.bin
+secure_boot_signing_key.pem
