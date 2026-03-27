@@ -79,6 +79,7 @@ fn init_oled_base<'a>(
 /// # Returns
 ///
 /// Returns a fully initialized `OledDisplay` instance ready for drawing commands.
+/// If `Ssd1306Async<>.init()` fails, it returns `None`.
 pub async fn init_oled<'a>(
     i2c0: impl Instance + 'a,
     sda: impl InputPin + OutputPin + 'a,
