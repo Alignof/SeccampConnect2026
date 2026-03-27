@@ -64,6 +64,7 @@
           esptool
           espflash
           gitMinimal
+          cargo-make
 
           vial
         ];

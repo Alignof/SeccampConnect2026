@@ -16,6 +16,7 @@
 mod keymap;
 #[macro_use]
 mod macros;
+mod oled;
 mod vial;
 
 use core::ptr::addr_of_mut;
@@ -45,6 +46,7 @@ use rmk::keyboard::Keyboard;
 use rmk::matrix::Matrix;
 use rmk::storage::async_flash_wrapper;
 use rmk::{HostResources, initialize_encoder_keymap_and_storage, run_devices, run_rmk};
+use ssd1306::prelude::DisplayRotation;
 use static_cell::StaticCell;
 use {esp_alloc as _, esp_backtrace as _};
 
@@ -58,7 +60,7 @@ use crate::vial::{VIAL_KEYBOARD_DEF, VIAL_KEYBOARD_ID};
 /// Initialize devices and spawn rmk tasks.
 #[allow(clippy::used_underscore_binding)]
 #[esp_rtos::main]
-async fn main(_s: Spawner) {
+async fn main(spawner: Spawner) {
     // Singleton for ble controller.
     static RADIO: StaticCell<Controller<'static>> = StaticCell::new();
     // Endpoint buffer for USB transfer.
@@ -96,8 +98,20 @@ async fn main(_s: Spawner) {
     let flash = FlashStorage::new(peripherals.FLASH);
     let flash = async_flash_wrapper(flash);
 
+    // Spawn oled task
+    let display = oled::init_oled(
+        peripherals.I2C0,
+        peripherals.GPIO5,
+        peripherals.GPIO6,
+        DisplayRotation::Rotate0,
+    )
+    .await;
+    if let Some(display) = display {
+        spawner.spawn(oled::oled_task(display)).unwrap();
+    }
+
     // Initialize the IO pins
-    let (row_pins, col_pins) = config_matrix_pins_esp!(peripherals: peripherals, input: [GPIO4, GPIO7], output: [GPIO6, GPIO5, GPIO3]);
+    let (row_pins, col_pins) = config_matrix_pins_esp!(peripherals: peripherals, input: [GPIO4, GPIO7, GPIO1], output: [GPIO8, GPIO9, GPIO3, GPIO2]);
 
     // RMK config
     let vial_config = VialConfig::new(VIAL_KEYBOARD_ID, VIAL_KEYBOARD_DEF, &[(0, 0), (1, 1)]);

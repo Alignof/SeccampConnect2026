@@ -5,9 +5,9 @@ use rmk::types::action::{EncoderAction, KeyAction};
 use rmk::{k, layer, mo};
 
 /// Number of columns.
-pub(crate) const COL: usize = 3;
+pub(crate) const COL: usize = 4;
 /// Number of rows.
-pub(crate) const ROW: usize = 2;
+pub(crate) const ROW: usize = 3;
 /// Number of keymap layers.
 pub(crate) const NUM_LAYER: usize = 2;
 /// Number of rotary encoders.
@@ -18,12 +18,14 @@ pub(crate) const NUM_ENCODER: usize = 1;
 pub const fn get_default_keymap() -> [[[KeyAction; COL]; ROW]; NUM_LAYER] {
     [
         layer!([
-            [k!(A), k!(B), k!(Backspace)],
-            [k!(C), k!(D), mo!(1)]
+            [k!(Quote), k!(Semicolon), k!(Dot), k!(P)],
+            [k!(A), k!(O), k!(E), k!(U)],
+            [mo!(1), k!(Q), k!(J), k!(K)]
         ]),
         layer!([
-            [k!(E), k!(F), k!(Enter)],
-            [k!(Kc4), k!(Kc5), k!(Kc6)]
+            [k!(Kc1), k!(Quote), k!(Kc3), k!(Kc4)],
+            [k!(Kc1), k!(Kc2), k!(Kc3), k!(Kc4)],
+            [k!(Quote), k!(Q), k!(J), k!(K)]
         ]),
     ]
 }
