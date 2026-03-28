@@ -60,6 +60,8 @@
           rust_toolchain_esp
 
           esp-idf-s3-full
+          esp-idf-s3-full.tools.xtensa-esp-elf
+          esp-idf-s3-full.tools.esp32ulp-elf
 
           esptool
           espflash
@@ -152,7 +154,10 @@
           config = {
             Cmd = [ "/bin/sh" ];
             Env = [
-              "PATH=/bin:/usr/bin:/sbin"
+              "PATH=${pkgs.esp-idf-s3-full}/tools:/bin:/usr/bin:/sbin"
+              "IDF_PATH=${pkgs.esp-idf-s3-full}"
+              "IDF_PYTHON_CHECK_CONSTRAINTS=no"
+              "IDF_PYTHON_CHECK_DONE=1"
               "SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
               "LD_LIBRARY_PATH=/lib:/usr/lib:${pkgs.stdenv.cc.cc.lib}/lib"
             ];
