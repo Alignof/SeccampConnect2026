@@ -1,6 +1,6 @@
 {
     "name": "ESP32S3 Rust Development (Nix-based)",
-    "image": "ghcr.io/alignof/esp32s3_led_blink:latest",
+    "image": "ghcr.io/alignof/seccamp2026:latest",
 
     "customizations": {
         "vscode": {
